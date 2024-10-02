@@ -1,0 +1,156 @@
+Saul Resendiz
+
+			WEEK 4 LAB
+
+	QUESTION 1:
+total = 0
+
+for day in range(1, 8):
+	print('Enter the bugs collected on day', day)
+	
+	bugs = int(input())
+	total += bugs
+
+print('You collected a total of', total, 'bugs.')
+
+----------------------------------------------------------
+
+	QUESTION 2:
+
+# calories burned per minute
+cals_per_min = 4.2
+
+# For loop from 10 to 30 range
+for mins in range(10, 31, 5): # Starting at 10, end at 30, increment by 5 
+    calories_burned = cals_per_min * mins
+    print(f"Number of Calories burned after {mins} minutes: {calories_burned}")
+
+----------------------------------------------------------------------------------------
+
+	QUESTION 3:
+# Prompt user for their months' budget
+budget = float(input("Enter your budget for the month: "))
+total_expenses = 0.0
+
+while True:
+    expense = input("Enter expenses or 'n' when finished: ")
+    if expense.lower() == 'n' :
+        break
+    else: 
+        total_expenses += float(expense)
+
+budget_calc = (budget - total_expenses)	#Calculating budget minus how much spent total
+
+if (budget_calc > 0) :
+    print(f"You are under budget by ${budget_calc}")
+elif (budget_calc < 0) :
+    budget_calc = (budget_calc * -1)
+    print(f"You are over budget by ${budget_calc}")
+else:
+    print('You are right on budget!')
+
+-------------------------------------------------------------------------
+	QUESTION 4: 
+
+# Get user input for speed and hours
+veichle_speed = int(input("Enter speed of veichle in MPH: "))
+hours_traveled = int(input("Enter number of hours its traveled: "))
+
+# Print heading to console
+print("Hour \t\t Distance Traveled")
+print("_" * 35)
+
+# For loop starting from 1 up to amount of hours traveled, incrementing by 1
+for hour_i in range(1, hours_traveled + 1):
+    distance = (veichle_speed * hour_i)
+    print(f"{hour_i} \t\t {distance}")
+
+--------------------------------------------------------------------
+
+	QUESTION 5:
+# Get the number of years from the user
+years = int(input("Enter the number of years of rainfall: "))
+
+# Initialize variables
+total_rainfall = 0
+
+# Looping for every year
+for x in range(1, years + 1):
+    print(f"YEAR #{x} RAINFALL: ")
+    
+    # Outer loop for months in a year
+    for month in range(1, 13):  # range of an year
+        month_rainfall = float(input(f"Enter the inches of rainfall for month #{month}: ")) #Loop 12 times for months
+        total_rainfall += month_rainfall #Accumulate total rainfall for the year
+
+# Calculating total months/ average
+total_months = (12 * years)
+average_rainfall = (total_rainfall / total_months)
+
+# Print data to console
+print(f"Total number of months: {total_months}")
+print(f"Total inches of rainfall: {total_rainfall}")
+print(f"Total average rainfall per month: {average_rainfall}")
+
+---------------------------------------------------------------------
+		QUESTION 6
+print("Celsius\t \tFahrenheit")
+print("-" * 25) 
+# For loop from 0 to 20 range 
+for C in range(0, 21):
+    fahrenheit = (9/5) * C + 32  # fahrenheit calculation
+    print(f"{C} \t\t {fahrenheit}") #Print 
+
+-------------------------------------------------------------------------------
+
+		QUESTION 7:
+daily_salary = 1 #Starting at 1 penny for day one
+total_salary = 0.0
+total_dollar_amount = 0.0
+num_days = int(input("Enter the number of days for your earnings: "))
+
+# Loop from range of 1 up to number of days user entered
+for day in range(1, num_days + 1):
+    print("Day \t\t Salary (pennies)")
+    print(f"{day} \t\t {daily_salary}")  
+    total_salary += daily_salary   
+    daily_salary *= 2  # doulbing the daily salary for next iteration
+
+total_dollar_amount = (total_salary / 100) #Convert to dollars
+print (f" Total pay in dollar amount: ${total_dollar_amount}")
+
+---------------------------------------------------------------------------
+		QUESTION 8:
+
+total_sum = 0
+
+while True:
+    user_input = int(input("Enter a positive integer, or enter a NEGATIVE integer to end loop")) 
+    if (user_input < 0) :
+        break
+    else :
+        total_sum += user_input
+        
+print(f" Total Sum: {total_sum}")
+
+---------------------------------------------------------------------------------
+
+		QUESTION 9:
+ocean_level_rise_rate = 1.6 
+
+for x in range (1, 26) :
+    print(f"Year: {x} \t Ocean Level Rise: {ocean_level_rise_rate:.2f}")
+    ocean_level_rise_rate += 1.6 
+
+-------------------------------------------------------------------------------------------------------------------
+
+		QUESTION 10:
+college_tuition_per_year = 16000 # 2 Semesters per year, so 8000 * 2 
+percent_increase = 0.03
+new_cost = 0.0
+
+for x in range (1, 6) :
+    print(f"School Year {x} \t Tuition Amount:{college_tuition_per_year}")
+    new_cost = (college_tuition_per_year * percent_increase)
+    college_tuition_per_year += new_cost
+
